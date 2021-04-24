@@ -1,0 +1,71 @@
+//-----------------------------------------
+//             BCCForm Ver 2.41
+//    An Easy Resource Editor for BCC
+//  Copyright (c) February 2002 by ysama
+//-----------------------------------------
+#include <windows.h>
+#include "hozu.h"
+
+
+//-------------------------
+// メニュー（HOZUMENU）
+//-------------------------
+HOZUMENU MENU DISCARDABLE
+{
+	POPUP "川柳(&S)"
+	{
+		MENUITEM "一句(&I)", IDM_IKKU
+		MENUITEM "終了(&Q)", IDM_QUIT
+	}
+	POPUP "ヘルプ(&H)"
+	{
+		MENUITEM "&Readme.txt...", IDM_README
+		MENUITEM "豊充風船商店Webサイト(&P)...", IDM_HP
+		MENUITEM SEPARATOR
+		MENUITEM "バージョン情報(&A)...", IDM_VERSION
+	}
+
+}
+
+//--------------------------
+// イメージ（ATAGO）
+//--------------------------
+ATAGO	GIF		"atago.gif"
+
+//--------------------------
+// イメージ（HOZUICON）
+//--------------------------
+HOZUICON	ICON		"hozu.ico"
+
+//--------------------
+//  ヴァージョン情報
+//--------------------
+1		VERSIONINFO
+FILEVERSION		2, 3, 0, 0
+PRODUCTVERSION	2, 3, 0, 0
+FILEFLAGSMASK	VS_FFI_FILEFLAGSMASK
+FILEFLAGS		0x00000000L
+FILEOS			VOS__WINDOWS32
+FILETYPE		VFT_APP
+FILESUBTYPE		VFT2_UNKNOWN
+{
+	BLOCK "VarFileInfo"
+	{
+		VALUE "Translation", 0x0411 0x04B0
+	}
+
+	BLOCK "StringFileInfo"
+	{
+		BLOCK "041104B0"
+		{
+			VALUE "CompanyName",		"豊充風船商店\0"
+			VALUE "FileDescription",	"保津川川柳\0"
+			VALUE "FileVersion",		"2.3\0"
+			VALUE "InternalName",		"hozu.exe\0"
+			VALUE "LegalCopyright",		"Copyright (C) 2002-2021 豊充風船商店\0"
+			VALUE "OriginalFilename",	"hozu.exe\0"
+			VALUE "ProductName",		"保津川川柳\0"
+			VALUE "ProductVersion",		"2.3\0"
+		}
+	}
+}
